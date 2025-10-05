@@ -10,6 +10,8 @@ body {
     overflow: hidden auto;
 }
 
+/* PAGINA PRINCIPALA */
+
 nav {
     position: fixed;
     top: 96px;
@@ -291,6 +293,77 @@ footer > p {
     user-select: none;
 }
 
+/* INDIVIDUAL */
+
+.individual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.individual > section {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
+
+.individual > section > img {
+    position: absolute;
+}
+
+section#baiat {
+    background-image: url(img/INDIVIDUAL_STANGA.png);
+}
+section#fata {
+    background-image: url(img/INDIVIDUAL_DREAPTA.png);
+}
+
+section#baiat > img {
+    bottom: 0;
+    left: 0;
+}
+section#fata > img {
+    bottom: 0;
+    right: 0;
+}
+
+.individual section .despre-participant {
+    position: absolute;
+}
+section#baiat .despre-participant {
+    left: 742px;
+}
+section#fata .despre-participant {
+    left: 124px;
+}
+
+.individual section .despre-participant > h1 {
+    color: #800020;
+    text-shadow: 0 4px 26px rgba(128, 0, 32, 0.25);
+    font-size: 120px;
+    font-style: italic;
+    font-weight: 400;
+}
+.individual section .despre-participant > p {
+    width: 1110px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+}
+.individual section .despre-participant > p > span {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+
+/* ****** RESPONSIVE ****** */
+
 
 /* s */
 @media (max-width: 767px) {
@@ -314,7 +387,6 @@ footer > p {
     header > p {
         font-size: 40px;
     }
-    
     header > .countdown {
         gap: 10px;
     }
@@ -411,15 +483,139 @@ footer > p {
         width: 356px;
         font-size: 16px;
     }
-}
-/* ss */
-/* @media (max-width: 768px) {
-    header {
+
+    .individual > section {
+        position: relative;
+        width: 100%;
+        height: 800px;
+        background-size: 100% 100%;
     }
-} */
-/* m */
-@media (min-width: 1024px) {
+    .individual > section#fata {
+        height: 550px;
+    }
+    .individual section .despre-participant {
+        top: 200px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        flex-direction: column;
+    }
+    .individual section#baiat .despre-participant {
+        top: 400px;
+    }
+    .individual section .despre-participant > h1 {
+        font-size: 40px;
+    }
+    .individual section .despre-participant > p {
+        width: 350px;
+        font-size: 20px;
+    }
 }
-/* l */
-@media (min-width: 1280px) {
+@media (min-width: 767px) and (max-width: 1024px) {
+    header {
+        height: 800px;
+    }
+    header > span {
+        font-size: 18px;
+    }
+    header > h1 {
+        font-size: 80px;
+    }
+    header > h2 {
+        font-size: 45px;
+    }
+    header > p {
+        font-size: 80px;
+    }
+
+    section#echipe {
+        background-size: contain;
+        object-fit: contain;
+    }
+    section#echipe > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#echipe > p {
+        width: 620px;
+        font-size: 18px;
+    }
+    section#echipe > p > span {
+        font-size: 18px;
+    }
+    section#echipe .grid-echipe {
+        width: 620px;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    section#sponsori > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#sponsori > p {
+        width: 616px;
+        font-size: 18px;
+    }
+    section#sponsori .grid-sponsori {
+        width: 616px;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 40px 40px;
+    }
+
+    section#bilete {
+        height: 500px;
+        background-size: cover;
+        background-position: bottom 0% left 90%;
+    }
+    section#bilete > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#bilete > p {
+        width: 608px;
+        font-size: 26px;
+    }
+
+    section#tombola {
+        padding-top: 82px;
+        height: 400px;
+        background-size: cover;
+        background-position: bottom 0% left 78%;
+    }
+    section#tombola > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#tombola > p {
+        width: 620px;
+        font-size: 26px;
+    }
+
+    .individual > section {
+        position: relative;
+        width: 100%;
+        height: 1180px;
+        background-size: 100% 100%;
+    }
+    .individual > section#fata {
+        height: 950px;
+    }
+    .individual section .despre-participant {
+        top: 200px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        flex-direction: column;
+    }
+    .individual section#baiat .despre-participant {
+        top: 520px;
+    }
+    .individual section#fata .despre-participant {
+        top: 320px;
+    }
+    .individual section .despre-participant > h1 {
+        font-size: 90px;
+    }
+    .individual section .despre-participant > p {
+        width: 650px;
+        font-size: 30px;
+    }
 }

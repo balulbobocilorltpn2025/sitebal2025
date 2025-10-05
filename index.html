@@ -9,99 +9,129 @@
 
     <link href="https://fonts.cdnfonts.com/css/coolvetica-2" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+
     <link href="reset.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a class="active" href="#echipe">ECHIPE</a>
-        <a href="#sponsori">SPONSORI</a>
-        <a href="#bilete">BILETE SI TOMBOLA</a>
-    </nav>
-    <header>
-        <h1>BALUL BOBOCILOR</h1>
-        <h2>LICEUL TEORETIC PECIU NOU</h2>
-        <p>7 NOIEMBRIE, 18:00</p>
-        <div class="countdown">
-            <div>
-                <div>3</div>
-                <div>1</div>
-                <span>ZILE</span>
-            </div>
-            
-            <div>
-                <div>3</div>
-                <div>1</div>
-                <span>ORE</span>
-            </div>
+    <!-- DESPRE BAL -->
+    <div class="principal" v-if="!hide">
+        <nav>
+            <a class="active" href="#echipe">ECHIPE</a>
+            <a href="#sponsori">SPONSORI</a>
+            <a href="#bilete">BILETE SI TOMBOLA</a>
+        </nav>
+        <header>
+            <h1>BALUL BOBOCILOR</h1>
+            <h2>LICEUL TEORETIC PECIU NOU</h2>
+            <p>7 NOIEMBRIE, 18:00</p>
+            <div class="countdown">
+                <div>
+                    <div>{{ countdown.days[0] }}</div>
+                    <div>{{ countdown.days[1] }}</div>
+                    <span>ZILE</span>
+                </div>
+                
+                <div>
+                    <div>{{ countdown.hours[0] }}</div>
+                    <div>{{ countdown.hours[1] }}</div>
+                    <span>ORE</span>
+                </div>
 
-            <div>
-                <div>3</div>
-                <div>1</div>
-                <span>MINUTE</span>
+                <div>
+                    <div>{{ countdown.min[0] }}</div>
+                    <div>{{ countdown.min[1] }}</div>
+                    <span>MIN.</span>
+                </div>
             </div>
-        </div>
-        <span>*EVENIMENTUL SE VA DESFASURA IN INCINTA CAMINULUI CULTURAL PECIU NOU*</span>
-    </header>
-    <section id="echipe">
-        <h1>ECHIPELE BOBOCILOR</h1>
-        <p>
-            DE-A LUNGUL SERII VOR PARTICIPA LA DIVERSE PROBE STABILITE DE CATRE ORGANIZATORI,
-            VOR PREZENTA PROBA LIBERA PREGATITA IMPREUNA CU PARTENERUL/PARTENERA IAR IN FINAL JURIUL SI VOTUL ELEVILOR DE LICEU
-            VOR STABILI TITLURILE PE CARE LE VOR CASTIGA:
-            <span>MISS & MR. BOBOC, MISS & MR. ELEGANTA, MISS & MR. POPULARITATE, REGELE SI REGINA BALULUI</span>
-        </p>
-        <div class="grid-echipe">
-            <img src="img/echipe/ALEXANDRU_ANDREEA.png" alt="" draggable="false">
-            <img src="img/echipe/DARIUS_IZABELA.png" alt="" draggable="false">
-            <img src="img/echipe/ALEXANDRU_MARIA.png" alt="" draggable="false">
-            <img src="img/echipe/EMANUEL_ELIZA.png" alt="" draggable="false">
-            <img src="img/echipe/DARIUS_ANDREEA.png" alt="" draggable="false">
-            <img src="img/echipe/DAVID_ANDREEA.png" alt="" draggable="false">
-            <img src="img/echipe/ZORAN_VANESA.png" alt="" draggable="false">
-            <img src="img/echipe/CRISTIAN_IULIA.png" alt="" draggable="false">
-            <img src="img/echipe/CRISTIAN_NATALIA.png" alt="" draggable="false">
-            <img src="img/echipe/NIKOLAS_ARIANA.png" alt="" draggable="false">
-            <img src="img/echipe/VOICU_TANIA.png" alt="" draggable="false">
-            <img src="img/echipe/MARCUS_MELISA.png" alt="" draggable="false">
-        </div>
-    </section>
-    <section id="sponsori">
-        <h1>SPONSORI</h1>
-        <p>Le multumim din suflet tuturor partenerilor nostri pentru sprijinul acordat in organizarea Balului Bobocilor EDITIA 2025. Datorita generozitatii si implicarii lor, acest eveniment devine posibil si reuseste sa aduca bucurie si emotie tinerilor nostri. Recunostinta noastra se indreapta catre fiecare dintre voi pentru contributia adusa la succesul acestei seri speciale!</p>
-        <div class="grid-sponsori">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-            <img src="img/sponsori/profi.png" alt="" draggable="false">
-            <img src="img/sponsori/lidl.png" alt="" draggable="false">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-            <img src="img/sponsori/profi.png" alt="" draggable="false">
-            <img src="img/sponsori/lidl.png" alt="" draggable="false">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-            <img src="img/sponsori/profi.png" alt="" draggable="false">
-            <img src="img/sponsori/lidl.png" alt="" draggable="false">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-            <img src="img/sponsori/profi.png" alt="" draggable="false">
-            <img src="img/sponsori/lidl.png" alt="" draggable="false">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-            <img src="img/sponsori/roxemi.png" alt="" draggable="false">
-        </div>
-    </section>
-    <section id="bilete">
-        <h1>VREI BILET LA BAL?</h1>
-        <p>
-            ELEVII CLASELOR A 12-A TE POT AJUTA. CONTACTEAZA-NE<br/>PE CONTUL DE INSTAGRAM DEDICAT EVENIMENTULUI<br/>SAU IN PRIVAT. BILETUL COSTA <font color="#800020">25 DE LEI.</font>
-            <img src="img/insta.png" alt="">
-        </p>
-    </section>
-    <section id="tombola">
-        <h1>DESPRE TOMBOLA</h1>
-        <p>
-            PE PARCURSUL SERII, IN TIMPUL PAUZELOR, VOM<br/>ORGANIZA TOMBOLA LA CARE SE POATE PARTICIPA<br/>
-            <font color="#800020">DOAR CU BILETUL LA INDEMANA.</font> PREMIILE CONSTAU<br/>
-            IN VOUCHERE SAU BUNURI MATERIALE.
-        </p>
-    </section>
-    <footer><p>BALUL TEORETIC LICEUL PECIU NOU EDITIA 2025 ORA 19:00</p></footer>
+            <span>*EVENIMENTUL SE VA DESFASURA IN INCINTA CAMINULUI CULTURAL PECIU NOU*</span>
+        </header>
+        <section id="echipe">
+            <h1>ECHIPELE BOBOCILOR</h1>
+            <p>
+                DE-A LUNGUL SERII VOR PARTICIPA LA DIVERSE PROBE STABILITE DE CATRE ORGANIZATORI,
+                VOR PREZENTA PROBA LIBERA PREGATITA IMPREUNA CU PARTENERUL/PARTENERA IAR IN FINAL JURIUL SI VOTUL ELEVILOR DE LICEU
+                VOR STABILI TITLURILE PE CARE LE VOR CASTIGA:
+                <span>MISS & MR. BOBOC, MISS & MR. ELEGANTA, MISS & MR. POPULARITATE, REGELE SI REGINA BALULUI</span>
+            </p>
+            <div class="grid-echipe">
+                <img src="img/echipe/ALEXANDRU_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'ANDREEA')">
+                <img src="img/echipe/DARIUS_IZABELA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'IZABELA')">
+                <img src="img/echipe/ALEXANDRU_MARIA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'MARIA')">
+                <img src="img/echipe/EMANUEL_ELIZA.png" alt="" draggable="false" @click="viewParticipants('EMANUEL', 'ELIZA')">
+                <img src="img/echipe/DARIUS_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'ANDREEA')">
+                <img src="img/echipe/DAVID_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DAVID', 'ANDREEA')">
+                <img src="img/echipe/ZORAN_VANESA.png" alt="" draggable="false" @click="viewParticipants('ZORAN', 'VANESA')">
+                <img src="img/echipe/CRISTIAN_IULIA.png" alt="" draggable="false" @click="viewParticipants('CRISTIAN', 'IULIA')">
+                <img src="img/echipe/CRISTIAN_NATALIA.png" alt="" draggable="false" @click="viewParticipants('CRISTIAN', 'NATALIA')">
+                <img src="img/echipe/NIKOLAS_ARIANA.png" alt="" draggable="false" @click="viewParticipants('NIKOLAS', 'ARIANA')">
+                <img src="img/echipe/VOICU_TANIA.png" alt="" draggable="false" @click="viewParticipants('VOICU', 'TANIA')">
+                <img src="img/echipe/MARCUS_MELISA.png" alt="" draggable="false" @click="viewParticipants('MARCUS', 'MELISA')">
+            </div>
+        </section>
+        <section id="sponsori">
+            <h1>SPONSORI</h1>
+            <p>Le multumim din suflet tuturor partenerilor nostri pentru sprijinul acordat in organizarea Balului Bobocilor EDITIA 2025. Datorita generozitatii si implicarii lor, acest eveniment devine posibil si reuseste sa aduca bucurie si emotie tinerilor nostri. Recunostinta noastra se indreapta catre fiecare dintre voi pentru contributia adusa la succesul acestei seri speciale!</p>
+            <div class="grid-sponsori">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+            </div>
+        </section>
+        <section id="bilete">
+            <h1>VREI BILET LA BAL?</h1>
+            <p>
+                ELEVII CLASELOR A 12-A TE POT AJUTA. CONTACTEAZA-NE<br/>PE CONTUL DE INSTAGRAM DEDICAT EVENIMENTULUI<br/>SAU IN PRIVAT. BILETUL COSTA <font color="#800020">25 DE LEI.</font>
+                <img src="img/insta.png" alt="">
+            </p>
+        </section>
+        <section id="tombola">
+            <h1>DESPRE TOMBOLA</h1>
+            <p>
+                PE PARCURSUL SERII, IN TIMPUL PAUZELOR, VOM<br/>ORGANIZA TOMBOLA LA CARE SE POATE PARTICIPA<br/>
+                <font color="#800020">DOAR CU BILETUL LA INDEMANA.</font> PREMIILE CONSTAU<br/>
+                IN VOUCHERE SAU BUNURI MATERIALE.
+            </p>
+        </section>
+        <footer><p>BALUL TEORETIC LICEUL PECIU NOU EDITIA 2025 ORA 19:00</p></footer>
+    </div>
+
+    <!-- INDIVIDUAL -->
+    <div class="individual" v-if="!hide">
+        <nav>
+            <a href="">← INAPOI LA PAGINA PRINCIPALA</a>
+        </nav>
+        <section id="baiat">
+            <img :src="'img/participanti/' + boy + '_' + girl + '_' + boy + '.png'" alt="" draggable="false">
+            <div class="despre-participant">
+                <h1 v-html="text[boy + '_' + girl].boy.fullName"></h1>
+                <p><span>Motto:</span> “{{ text[boy + '_' + girl].boy.motto }}”</p>
+                <p><span>Daca ar fi sa alegi 3 cuvinte care te caracterizeaza, care ar fi acelea?:</span> {{ text[boy + '_' + girl].boy.words }}</p>
+            </div>
+        </section>
+        <section id="fata">
+            <img :src="'img/participanti/' + boy + '_' + girl + '_' + girl + '.png'" alt="" draggable="false">
+            <div class="despre-participant">
+                <h1 v-html="text[boy + '_' + girl].girl.fullName"></h1>
+                <p><span>Motto:</span> “{{ text[boy + '_' + girl].girl.motto }}”</p>
+                <p><span>Daca ar fi sa alegi 3 cuvinte care te caracterizeaza, care ar fi acelea?:</span> {{ text[boy + '_' + girl].girl.words }}</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
