@@ -160,7 +160,7 @@ const Individual = new Vue({
                 },
                 girl: {
                     fullName: "TRIFON<br/>NATALIA",
-                    motto: "Fii schimbarea pe care vrei sa o vezi in lume",
+                    motto: "Fii bun chiar si atunci cand nimeni nu vede.",
                     words: "intelegatoare, empatica, generoasa",
                 }
             },
