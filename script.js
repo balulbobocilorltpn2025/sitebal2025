@@ -181,7 +181,7 @@ const Individual = new Vue({
             'VOICU_TANIA': {
                 boy: {
                     fullName: "CIOBANU<br/>VOICU FLORIAN",
-                    motto: "“Ori numarul 1, ori m-apuc de plantat flori, nu-mi place numarul 2, ca nu vreau sa fiu ca voi",
+                    motto: "Ori numarul 1, ori m-apuc de plantat flori, nu-mi place numarul 2, ca nu vreau sa fiu ca voi",
                     words: "increzator, dedicat, pasionat",
                 },
                 girl: {
