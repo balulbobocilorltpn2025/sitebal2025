@@ -1,10 +1,14 @@
 // nu e cea mai buna implementare, deci daca cineva vede asta nu folositi!!! dar pt un site pt bal e mai mult decat suficient 😊
 
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+}
+
 const Principal = new Vue({
     el: ".principal",
     data: {
         hide: false,
-        countdown: {days: [0, 0], hours: [0, 0], min: [0, 0]},
+        countdown: { days: [0, 0], hours: [0, 0], min: [0, 0] },
     },
     mounted() {
         setInterval(() => {
@@ -56,7 +60,7 @@ const Individual = new Vue({
                     words: "eleganta, motivatie, energie",
                 }
             },
-            
+
             'DARIUS_IZABELA': {
                 boy: {
                     fullName: "CONIA<br/>DARIUS",
@@ -69,7 +73,7 @@ const Individual = new Vue({
                     words: "optimista, plina de viata, creativa",
                 }
             },
-            
+
             'ALEXANDRU_MARIA': {
                 boy: {
                     fullName: "CĂLDĂRARU<br/>ALEX-MARIO",
@@ -82,7 +86,7 @@ const Individual = new Vue({
                     words: "petrecareata, prietenoasa, generoasa",
                 }
             },
-            
+
             'EMANUEL_ELIZA': {
                 boy: {
                     fullName: "ȚĂPÎRDREA<br/>EMANUEL PATRICK",
@@ -95,7 +99,7 @@ const Individual = new Vue({
                     words: "sarcastica, de treaba, calma",
                 }
             },
-            
+
             'DARIUS_ANDREEA': {
                 boy: {
                     fullName: "FERENȚ<br/>PETRU DARIUS",
@@ -108,7 +112,7 @@ const Individual = new Vue({
                     words: "creativa, optimista, perseverenta",
                 }
             },
-            
+
             'DAVID_ANDREEA': {
                 boy: {
                     fullName: "PRISECARU<br/>DAVID",
@@ -121,7 +125,7 @@ const Individual = new Vue({
                     words: "amabila, prietenoasa, zambitoare",
                 }
             },
-            
+
             'ZORAN_VANESA': {
                 boy: {
                     fullName: "MATEI<br/>ZORAN",
@@ -134,7 +138,7 @@ const Individual = new Vue({
                     words: "prietenoasa, sensibila, ambitioasa",
                 }
             },
-            
+
             'CRISTIAN_IULIA': {
                 boy: {
                     fullName: "TURESCHI<br/>CRISTIAN",
@@ -209,7 +213,23 @@ const Individual = new Vue({
     },
     watch: {
         hide(newHide) {
-            if (!newHide) window.scrollTo({top: 0, behavior: 'smooth'});
+            if (!newHide) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 })
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const link = document.querySelector(`nav a[href="#${entry.target.getAttribute('id')}"]`);
+
+        if (link && entry.isIntersecting) {
+            navLinks.forEach(a => a.classList.remove('active'));
+            link.classList.add('active');
+        }
+    });
+}, { threshold: isMobile ? 0.1 : 0.3 });
+
+sections.forEach(sec => observer.observe(sec));

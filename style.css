@@ -12,6 +12,10 @@ body {
 
 /* PAGINA PRINCIPALA */
 
+section {
+    position: relative;
+}
+
 nav {
     position: fixed;
     top: 96px;
@@ -368,6 +372,7 @@ section#fata .despre-participant {
 /* s */
 @media (max-width: 767px) {
     nav {
+        top: 56px;
         width: 300px;
         gap: 10px;
     }
@@ -511,6 +516,10 @@ section#fata .despre-participant {
     }
 }
 @media (min-width: 767px) and (max-width: 1024px) {
+    nav {
+        top: 56px;
+    }
+
     header {
         height: 800px;
     }
