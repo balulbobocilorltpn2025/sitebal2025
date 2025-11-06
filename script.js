@@ -4,9 +4,7 @@ function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
 }
 
-// const startBal = new Date('2025-11-07T18:00:00+02:00'); // 18:00 7 noiembrie 2025 RO
-
-const startBal = new Date('2025-11-06T21:04:00+02:00'); // 18:00 7 noiembrie 2025 RO
+const startBal = new Date('2025-11-07T18:00:00+02:00'); // 18:00 7 noiembrie 2025 RO
 
 function isVotShown() {
 
