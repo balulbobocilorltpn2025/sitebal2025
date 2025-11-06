@@ -58,9 +58,9 @@
             <div class="grid-echipe">
                 <img src="img/echipe/ALEXANDRU_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'ANDREEA')">
                 <img src="img/echipe/DARIUS_IZABELA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'IZABELA')">
-                <img src="img/echipe/ALEXANDRU_MARIA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'MARIA')">
-                <img src="img/echipe/EMANUEL_ELIZA.png" alt="" draggable="false" @click="viewParticipants('EMANUEL', 'ELIZA')">
-                <img src="img/echipe/DARIUS_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'ANDREEA')">
+                <!-- <img src="img/echipe/ALEXANDRU_MARIA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'MARIA')"> -->
+                <!-- <img src="img/echipe/EMANUEL_ELIZA.png" alt="" draggable="false" @click="viewParticipants('EMANUEL', 'ELIZA')"> -->
+                <!-- <img src="img/echipe/DARIUS_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'ANDREEA')"> -->
                 <img src="img/echipe/DAVID_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DAVID', 'ANDREEA')">
                 <img src="img/echipe/ZORAN_VANESA.png" alt="" draggable="false" @click="viewParticipants('ZORAN', 'VANESA')">
                 <img src="img/echipe/CRISTIAN_IULIA.png" alt="" draggable="false" @click="viewParticipants('CRISTIAN', 'IULIA')">
@@ -128,6 +128,50 @@
                 <h1 v-html="text[boy + '_' + girl].girl.fullName"></h1>
                 <p><span>Motto:</span> “{{ text[boy + '_' + girl].girl.motto }}”</p>
                 <p><span>Daca ar fi sa alegi 3 cuvinte care te caracterizeaza, care ar fi acelea?:</span> {{ text[boy + '_' + girl].girl.words }}</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- VOTARE -->
+    <div class="votare" v-if="okvote">
+        <nav>
+            <a href="#sponsori">VOTEAZA</a>
+            <a href="#sponsori">SPONSORI</a>
+        </nav>
+        
+        <header>
+            <h1>PARTICIPA LA VOTUL LIVE</h1>
+            <h2>AJUTA-TI PREFERATII SA CASTIGE</h2>
+            <div class="redirecturi">
+                <a href="https://strawpoll.com/w4nWWm3qqnA" target="_blank" style="display:block;text-decoration:none;">
+                    <div></div>
+                </a>
+                <a href="https://strawpoll.com/e6Z2AJorqgN" target="_blank" style="display:block;text-decoration:none;">
+                    <div></div>
+                </a>
+            </div>
+            <p>ATENTIE! Dupa ce ai votat unul dintre titlurile miss / mr. intoarce-te pentru a vota titlul opus.</p>
+        </header>
+
+        <section id="sponsori">
+            <h1>SPONSORI</h1>
+            <p>Le multumim din suflet tuturor partenerilor nostri pentru sprijinul acordat in organizarea Balului Bobocilor EDITIA 2025. Datorita generozitatii si implicarii lor, acest eveniment devine posibil si reuseste sa aduca bucurie si emotie tinerilor nostri. Recunostinta noastra se indreapta catre fiecare dintre voi pentru contributia adusa la succesul acestei seri speciale!</p>
+            <div class="grid-sponsori">
+                <!-- <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/profi.png" alt="" draggable="false">
+                <img src="img/sponsori/lidl.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false">
+                <img src="img/sponsori/roxemi.png" alt="" draggable="false"> -->
             </div>
         </section>
     </div>

@@ -366,6 +366,56 @@ section#fata .despre-participant {
 }
 
 
+/* VOTARE */
+
+.votare {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1999;
+}
+
+.votare header {
+    padding-top: 187px;
+}
+.votare header > h1 {
+    font-size: 120px;
+}
+.votare header > p {
+    font-size: 20px;
+}
+.votare .redirecturi {
+    margin-top: 40px;
+    margin-left: 50px;
+    display: flex;
+}
+.votare .redirecturi div {
+    position: relative;
+    width: 435px;
+    height: 405px;
+    display: grid;
+    place-items: center;
+    transition: .1s ease-in-out;
+}
+.votare .redirecturi div:hover {
+    transform: scale(1.1);
+}
+.votare .redirecturi div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/mrpop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.votare .redirecturi a:last-of-type div::before {
+    background-image: url(img/misspop.png);
+    top: -26px;
+}
+
+
 /* ****** RESPONSIVE ****** */
 
 
@@ -514,6 +564,50 @@ section#fata .despre-participant {
         width: 350px;
         font-size: 20px;
     }
+
+    .votare header > h1 {
+        font-size: 60px;
+    }
+    .votare header > p {
+        margin-top: 20px;
+        font-size: 14px;
+        width: 90%;
+        color: #A8ACA9;
+    }
+    .votare .redirecturi {
+        margin-top: 40px;
+        margin-left: 10px;
+        display: flex;
+    }
+    .votare .redirecturi a div {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: grid;
+        place-items: center;
+        transition: .1s ease-in-out;
+    }
+    .votare .redirecturi a div:hover {
+        transform: scale(1.1);
+    }
+    .votare .redirecturi a div::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(img/mrpop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .votare .redirecturi a:last-of-type div::before {
+        background-image: url(img/misspop.png);
+        top: -6px;
+        /* right: -6px; */
+    }
+    .votare .redirecturi a:first-of-type div::before {
+        left: 16px;
+        height: 165px;
+    }
 }
 @media (min-width: 767px) and (max-width: 1024px) {
     nav {
@@ -534,6 +628,13 @@ section#fata .despre-participant {
     }
     header > p {
         font-size: 80px;
+    }
+
+    .votare header {
+        height: 1000px;
+    }
+    .votare header > p {
+        display: none;
     }
 
     section#echipe {

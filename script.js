@@ -4,6 +4,26 @@ function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
 }
 
+// const startBal = new Date('2025-11-07T18:00:00+02:00'); // 18:00 7 noiembrie 2025 RO
+
+const startBal = new Date('2025-11-06T21:04:00+02:00'); // 18:00 7 noiembrie 2025 RO
+
+function isVotShown() {
+
+    const now = new Date();
+    const nowInRo = new Date(
+        now.toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })
+    );
+
+    const diffMs = startBal - nowInRo;
+
+    if (diffMs <= 0) {
+        return true;
+    }
+
+    return false;
+}
+
 const Principal = new Vue({
     el: ".principal",
     data: {
@@ -12,11 +32,9 @@ const Principal = new Vue({
     },
     mounted() {
         setInterval(() => {
-
-            const nov7 = new Date('2025-11-07T18:00:00+02:00');
             const now = new Date();
 
-            let diff = Math.max(0, nov7 - now);
+            let diff = Math.max(0, startBal - now);
 
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -29,7 +47,6 @@ const Principal = new Vue({
                 hours: splitNr(hours),
                 min: splitNr(mins)
             };
-
         }, 1000);
     },
     methods: {
@@ -215,6 +232,22 @@ const Individual = new Vue({
         hide(newHide) {
             if (!newHide) window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+    }
+})
+
+const Votare = new Vue({
+    el: ".votare",
+    data: {
+        okvote: false,
+    },
+    mounted() {
+        setInterval(() => {
+            this.okvote = isVotShown();
+            if (this.okvote && (!Principal.hide || !Individual.hide)) {
+                Principal.hide = true;
+                Individual.hide = true;
+            }
+        }, 1000);
     }
 })
 
