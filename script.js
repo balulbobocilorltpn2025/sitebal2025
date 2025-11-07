@@ -19,7 +19,7 @@ function isVotShown() {
         return true;
     }
 
-    return false;
+    return true;
 }
 
 const Principal = new Vue({
