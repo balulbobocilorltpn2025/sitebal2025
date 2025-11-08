@@ -17,15 +17,15 @@
 <body>
     <!-- DESPRE BAL -->
     <div class="principal" v-if="!hide">
-        <nav>
+        <!-- <nav>
             <a href="#echipe">ECHIPE</a>
             <a href="#sponsori">SPONSORI</a>
             <a href="#bilete">BILETE SI TOMBOLA</a>
-        </nav>
+        </nav> -->
         <header>
             <h1>BALUL BOBOCILOR</h1>
             <h2>LICEUL TEORETIC PECIU NOU</h2>
-            <p>7 NOIEMBRIE, 18:00</p>
+            <p>7 NOIEMBRIE 2025, 18:00</p>
             <div class="countdown">
                 <div>
                     <div>{{ countdown.days[0] }}</div>
@@ -45,9 +45,9 @@
                     <span>MIN.</span>
                 </div>
             </div>
-            <span>*EVENIMENTUL SE VA DESFASURA IN INCINTA CAMINULUI CULTURAL PECIU NOU*</span>
+            <span>EVENIMENTUL S-A INCHEIAT, MULTUMIM TUTUROR PENTRU PARTICIPARE!</span>
         </header>
-        <section id="echipe">
+        <!-- <section id="echipe">
             <h1>ECHIPELE BOBOCILOR</h1>
             <p>
                 DE-A LUNGUL SERII VOR PARTICIPA LA DIVERSE PROBE STABILITE DE CATRE ORGANIZATORI,
@@ -58,9 +58,6 @@
             <div class="grid-echipe">
                 <img src="img/echipe/ALEXANDRU_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'ANDREEA')">
                 <img src="img/echipe/DARIUS_IZABELA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'IZABELA')">
-                <!-- <img src="img/echipe/ALEXANDRU_MARIA.png" alt="" draggable="false" @click="viewParticipants('ALEXANDRU', 'MARIA')"> -->
-                <!-- <img src="img/echipe/EMANUEL_ELIZA.png" alt="" draggable="false" @click="viewParticipants('EMANUEL', 'ELIZA')"> -->
-                <!-- <img src="img/echipe/DARIUS_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DARIUS', 'ANDREEA')"> -->
                 <img src="img/echipe/DAVID_ANDREEA.png" alt="" draggable="false" @click="viewParticipants('DAVID', 'ANDREEA')">
                 <img src="img/echipe/ZORAN_VANESA.png" alt="" draggable="false" @click="viewParticipants('ZORAN', 'VANESA')">
                 <img src="img/echipe/CRISTIAN_IULIA.png" alt="" draggable="false" @click="viewParticipants('CRISTIAN', 'IULIA')">
@@ -69,8 +66,8 @@
                 <img src="img/echipe/VOICU_TANIA.png" alt="" draggable="false" @click="viewParticipants('VOICU', 'TANIA')">
                 <img src="img/echipe/MARCUS_MELISA.png" alt="" draggable="false" @click="viewParticipants('MARCUS', 'MELISA')">
             </div>
-        </section>
-        <section id="sponsori">
+        </section> -->
+        <!-- <section id="sponsori">
             <h1>SPONSORI</h1>
             <p>Le multumim din suflet tuturor partenerilor nostri pentru sprijinul acordat in organizarea Balului Bobocilor EDITIA 2025. Datorita generozitatii si implicarii lor, acest eveniment devine posibil si reuseste sa aduca bucurie si emotie tinerilor nostri. Recunostinta noastra se indreapta catre fiecare dintre voi pentru contributia adusa la succesul acestei seri speciale!</p>
             <div class="grid-sponsori">
@@ -92,12 +89,12 @@
                 <font color="#800020">DOAR CU BILETUL LA INDEMANA.</font> PREMIILE CONSTAU<br/>
                 IN VOUCHERE SAU BUNURI MATERIALE.
             </p>
-        </section>
-        <footer><p>BALUL LICEULUI TEORETIC PECIU NOU EDITIA 2025 7 NOV. ORA 18:00</p></footer>
+        </section> -->
+        <!-- <footer><p>BALUL LICEULUI TEORETIC PECIU NOU EDITIA 2025 7 NOV. ORA 18:00</p></footer> -->
     </div>
 
     <!-- INDIVIDUAL -->
-    <div class="individual" v-if="!hide">
+    <!-- <div class="individual" v-if="!hide">
         <nav>
             <a href="">← INAPOI LA PAGINA PRINCIPALA</a>
         </nav>
@@ -117,10 +114,10 @@
                 <p><span>Daca ar fi sa alegi 3 cuvinte care te caracterizeaza, care ar fi acelea?:</span> {{ text[boy + '_' + girl].girl.words }}</p>
             </div>
         </section>
-    </div>
+    </div> -->
 
     <!-- VOTARE -->
-    <div class="votare" v-if="okvote">
+    <!-- <div class="votare" v-if="okvote">
         <nav>
             <a href="#sponsori">VOTEAZA</a>
             <a href="#sponsori">SPONSORI</a>
@@ -148,7 +145,7 @@
                 <img src="img/sponsori/inferno.png" alt="" draggable="false">
             </div>
         </section>
-    </div>
+    </div> -->
 
     <script src="script.js" type="text/javascript"></script>
 </body>
